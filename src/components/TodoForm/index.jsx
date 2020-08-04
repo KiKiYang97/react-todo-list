@@ -1,5 +1,5 @@
 import React from 'react'
-import {getTodos} from "../../api";
+import {getTodos, postTodos} from "../../api";
 class TodoForm extends React.Component {
     constructor(props) {
         super(props);
@@ -14,7 +14,11 @@ class TodoForm extends React.Component {
     handleSubmit=(event)=>{
         event.preventDefault();
         this.props.addTodo(this.state.value)
-    }
+        postTodos({
+            content: this.state.value,
+            status: false
+        }).then(response =>null)
+     }
     render() {
         return (
             <div>

@@ -8,3 +8,7 @@ export  async function  getTodos(){
    let response = await todoApi.get("/todos")
     return response
 }
+export async function postTodos(todo){
+    let response =todoApi.post("/todos",todo)
+    return response
+}
