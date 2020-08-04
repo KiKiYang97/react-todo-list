@@ -1,12 +1,22 @@
 import { connect } from 'react-redux';
 import TodoList from "../components/TodoList";
+import {deleteTodo, toggleCompleted} from "../actions";
 
 const mapStateToProps=state=>{
     console.log(state)
     return{
-
        todoList: state.todoList
     }
 }
-const TodoListContainer=connect(mapStateToProps)(TodoList)
+const mapDispatchToProps = dispatch =>{
+    return{
+        deleteTodo : (index)=>{
+            dispatch(deleteTodo(index))
+        },
+        toggleCompleted : (index) => {
+            dispatch(toggleCompleted(index))
+        }
+    }
+}
+const TodoListContainer=connect(mapStateToProps,mapDispatchToProps)(TodoList)
 export default TodoListContainer

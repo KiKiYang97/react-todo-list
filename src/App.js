@@ -6,8 +6,8 @@ import TodoFormContainer from './containers/TodoFormContainer';
 function App() {
   return (
     <div className="App">
-      <TodoListContainer></TodoListContainer>
-      <TodoFormContainer></TodoFormContainer>
+      <TodoListContainer/>
+      <TodoFormContainer/>
     </div>
   );
 }
