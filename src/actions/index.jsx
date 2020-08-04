@@ -1,6 +1,7 @@
-export const addTodo = (text) => {
+export const addTodo = (text,isCompleted=false) => {
     return {
         text:text,
+        isCompleted : isCompleted,
         type:"ADD_TODO"
     }
 }

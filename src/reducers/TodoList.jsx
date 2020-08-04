@@ -7,7 +7,7 @@ const todoList=(state = defaultState,action)=>{
         {
             newState.push({
                 text:action.text,
-                isCompleted: false
+                isCompleted: action.isCompleted
             })
             return newState
         }

@@ -3,19 +3,26 @@ import './TodoListPage.css';
 import TodoListContainer from '../containers/TodoListContainer';
 import TodoFormContainer from '../containers/TodoFormContainer';
 import {Menu} from "../router/Menu";
+import {getTodos} from "../api";
 
-function TodoListPage() {
-    return (
-        <div>
-            <Menu/>
+class TodoListPage extends React.Component {
+    componentDidMount() {
 
-            <div className="App">
-                <TodoListContainer/>
-                <TodoFormContainer/>
+    }
 
+    render() {
+        return (
+            <div>
+                <Menu/>
+
+                <div className="App">
+                    <TodoListContainer/>
+                    <TodoFormContainer/>
+
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
 }
 
 export default TodoListPage;
