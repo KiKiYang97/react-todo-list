@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import TodoList from "../components/TodoList";
-import {deleteTodo, toggleCompleted} from "../actions";
+import {deleteTodo, toggleCompleted, initTodos} from "../actions";
 
 const mapStateToProps=state=>{
-    console.log(state)
+    // console.log(state)
     return{
        todoList: state.todoList
     }

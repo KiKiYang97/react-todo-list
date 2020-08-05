@@ -5,10 +5,9 @@ const todoList=(state = defaultState,action)=>{
     switch(action.type){
         case 'ADD_TODO':
         {
-            newState.push({
-                text:action.text,
-                isCompleted: action.isCompleted
-            })
+            newState.push(
+                action.todo
+            )
             return newState
         }
         case 'DELETE_TODO':{
@@ -16,10 +15,13 @@ const todoList=(state = defaultState,action)=>{
             return newState
         }
         case 'TOGGLE_COMPLETED':{
-            newState[action.index].isCompleted= !newState[action.index].isCompleted
+            newState[action.index].status= !newState[action.index].status
             return newState
         }
-            default:return state
+        case 'INIT_TODOS' :{
+            return action.todos
+        }
+        default:return state
     }
 }
 export default todoList
@@ -29,8 +31,8 @@ export default todoList
 state = [ "1","2"]
 
 state=[
-    { text:"",state:"",index:""},
-    { text:"",state:"",index:""},
-    { text:"",state:"",index:""}
+    { text:"",state:"",index:"",id:""},
+    { text:"",state:"",index:"",id:""},
+    { text:"",state:"",index:"",id:""}
     ]
  */

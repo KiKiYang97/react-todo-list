@@ -5,8 +5,8 @@ class DoneList extends Component {
         return (
             <div>
                 {
-                    this.props.todoList.filter(value=>value.isCompleted).map(value=>{
-                        return <div>{value.text}</div>
+                    this.props.todoList.filter(value=>value.status).map((value,index)=>{
+                        return <div key={index}>{value.content}</div>
                     })
                 }            </div>
         );

@@ -3,7 +3,6 @@ import Todo from '../Todo'
 class TodoList extends React.Component {
 
     render() {
-        console.log(this.props)
         return (
             <div>
                <p>To do List</p>
@@ -15,8 +14,9 @@ class TodoList extends React.Component {
                             <Todo {...this.props}
                                   key={index}
                                   index = {index}
+                                  todo = {value}
                                   isCompleted = {value.isCompleted}
-                                  todo={value.text}/>
+                                  />
                        )
                    }
 

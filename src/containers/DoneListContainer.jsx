@@ -5,6 +5,7 @@ import DoneList from "../components/DoneList";
 
 const mapStateToProps=state=>{
     return{
+        // todo
         todoList: state.todoList
     }
 }

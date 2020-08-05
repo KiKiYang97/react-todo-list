@@ -1,8 +1,9 @@
-export const addTodo = (text,isCompleted=false) => {
+export const addTodo = (todo) => {
     return {
-        text:text,
-        isCompleted : isCompleted,
+        // todo 封装成一个TODO对象
+        todo:todo,
         type:"ADD_TODO"
+        
     }
 }
 export const deleteTodo = (index) =>{
@@ -15,5 +16,11 @@ export const toggleCompleted = (index) =>{
     return {
         index : index,
         type : 'TOGGLE_COMPLETED'
+    }
+}
+export const initTodos = (todos) =>{
+    return {
+        type : 'INIT_TODOS',
+        todos:todos
     }
 }
