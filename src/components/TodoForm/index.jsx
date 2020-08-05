@@ -1,5 +1,9 @@
 import React from 'react'
 import { getTodos, postTodos } from "../../api";
+import { Form, Input, Button } from 'antd';
+import { EditOutlined,AudioOutlined } from '@ant-design/icons';
+import '../../App.css';
+const { Search } = Input;
 class TodoForm extends React.Component {
     constructor(props) {
         super(props);
@@ -20,10 +24,11 @@ class TodoForm extends React.Component {
 
     handleChange = (event) => {
         this.setState({ value: event.target.value });
+        console.log(this.state.value)
     }
     handleSubmit = (event) => {
-        event.preventDefault();
-        // todo
+        // console.log(event)
+        // event.preventDefault();
 
         postTodos({
             content: this.state.value,
@@ -33,12 +38,33 @@ class TodoForm extends React.Component {
         })
     }
     render() {
+        const suffix = (
+            <AudioOutlined
+              style={{
+                fontSize: 16,
+                color: '#1890ff',
+              }}
+            />
+          );
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
+            <div style={{ marginTop: "79px" }}>
+                {/*todo method can't use */}
+                <h2><EditOutlined />Todo List</h2>
+                <Search
+                     style={{ width: "400px", marginLeft: "84px" }}
+                    placeholder="input todo text"
+                    enterButton="Add"
+                    size="large"
+                    suffix={suffix}
+                    onChange={this.handleChange}
+                    onSearch={this.handleSubmit}
+                />
+                {/* <Button style={{ width: "100px", marginLeft: "10px" }} htmlType="submit" type="primary" onClick={this.handleSubmit}>add</Button> */}
+
+                {/* <form  style = {{marginTop:"100px"}} onSubmit={this.handleSubmit}>
                     <input type="text" onChange={this.handleChange} />
-                    <input type="submit" value="add" />
-                </form>
+                    <button  value="add"  type="submit"/>
+                </form > */}
             </div>
         );
     }

@@ -5,7 +5,7 @@ const todoList=(state = defaultState,action)=>{
     switch(action.type){
         case 'ADD_TODO':
         {
-            newState.push(
+            newState.unshift(
                 action.todo
             )
             return newState

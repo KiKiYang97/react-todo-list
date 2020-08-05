@@ -1,15 +1,15 @@
 import React from 'react'
 import Todo from '../Todo'
+import { List } from 'antd/lib/form/Form'
 class TodoList extends React.Component {
 
     render() {
         return (
             <div>
-               <p>To do List</p>
-               <div style={{
-                   display :"inline-grid"
-               }}>
-                   {
+                <div style={{
+                    display: "inline-grid"
+                }}>
+                    {
                         this.props.todoList.map((value,index)=>
                             <Todo {...this.props}
                                   key={index}

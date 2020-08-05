@@ -13,11 +13,11 @@ class TodoListPage extends React.Component {
     render() {
         return (
             <div>
-                <Menu/>
+                {/* <Menu/> */}
 
                 <div className="App">
+                <TodoFormContainer/>
                     <TodoListContainer/>
-                    <TodoFormContainer/>
 
                 </div>
             </div>

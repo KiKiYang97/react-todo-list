@@ -6,7 +6,7 @@ class DoneListPage extends Component {
     render() {
         return (
             <div>
-                <Menu/>
+                {/* <Menu/> */}
                 <h1>Done List Page</h1>
                 <DoneListContainer/>
             </div>

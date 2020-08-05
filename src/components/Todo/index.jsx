@@ -1,6 +1,7 @@
 import React from 'react'
 import { deleteTodos, putTodos } from '../../api'
-
+import { Alert,Button } from 'antd'
+import { DeleteOutlined } from '@ant-design/icons';
 class Todo extends React.Component {
     constructor(props) {
         super(props)
@@ -21,20 +22,21 @@ class Todo extends React.Component {
             <div style={{
                 display: "inline-flex"
             }}>
-                <div onClick={this.onToggleClick}>
+
+                <div style={{ display: "flex",marginBottom:"7px" }} onClick={this.onToggleClick}>
                     {
                         this.props.todo.status
-                            ? <span style={{
-                                textDecoration: "line-through"
-                            }}>{this.props.todo.content}</span>
-                            : <span>{this.props.todo.content}</span>
+                            ? <Alert message={this.props.todo.content} type="success"
+                                style={{
+                                    textDecoration: "line-through", width: "432px"
+                                }} />
+                            : <Alert style={{ width: "432px" }} message={this.props.todo.content} type="info" />
                     }
+                    <Button type="primary" shape="circle" onClick={this.onDeleteClick}  icon={<DeleteOutlined />}>
+                    </Button>
                 </div>
-
-                <button onClick={this.onDeleteClick}>
-                    delete
-                </button>
             </div>
+
         );
     }
 }
