@@ -13,7 +13,7 @@ class TodoList extends React.Component {
                         this.props.todoList.map((value,index)=>
                             <Todo {...this.props}
                                   key={index}
-                                  index = {index}
+                                  index = {value.id}
                                   todo = {value}
                                   isCompleted = {value.isCompleted}
                                   />

@@ -5,15 +5,15 @@ export const addTodo = (todo) => {
 
     }
 }
-export const deleteTodo = (index) => {
+export const deleteTodo = (id) => {
     return {
-        index: index,
+        id: id,
         type: "DELETE_TODO"
     }
 }
-export const toggleCompleted = (index) => {
+export const toggleCompleted = (id) => {
     return {
-        index: index,
+        id: id,
         type: 'TOGGLE_COMPLETED'
     }
 }

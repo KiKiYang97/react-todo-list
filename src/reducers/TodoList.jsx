@@ -11,11 +11,19 @@ const todoList=(state = defaultState,action)=>{
             return newState
         }
         case 'DELETE_TODO':{
-            newState.splice(action.index,1)
+            newState.forEach((value,index)=>{
+                if(value.id ===action.id ){
+                    newState.splice(index,1)
+                }
+            })
             return newState
         }
         case 'TOGGLE_COMPLETED':{
-            newState[action.index].status= !newState[action.index].status
+            newState.forEach((value,index)=>{
+                if(value.id ===action.id ){
+                    newState[index].status =!newState[index].status
+                }
+            })
             return newState
         }
         case 'INIT_TODOS' :{
