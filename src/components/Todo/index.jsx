@@ -32,7 +32,7 @@ class Todo extends React.Component {
                                 }} onClick={this.onToggleClick}/>
                             : <Alert style={{ width: "432px" }} message={this.props.todo.content} type="info" onClick={this.onToggleClick}/>
                     }
-                    <Button type="primary" shape="circle" onClick={this.onDeleteClick}  icon={<DeleteOutlined />}>
+                    <Button style={{height:"40px"}} type="primary"  onClick={this.onDeleteClick}  icon={<DeleteOutlined />}>
                     </Button>
                 </div>
             </div>

@@ -36,42 +36,10 @@ class App extends React.Component {
                             </div>
 
                 </Content>
-                <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+                <Footer style={{ textAlign: 'center' }}>TodoList ©2020 Created by KikiYang</Footer>
             </Layout>
             </Router>
             </Provider>
-            //     <Layout className="layout">
-            //     <Header>
-            //       <div className="logo" />
-            //       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-            //       <Provider store={store}>
-            //     <HashRouter>
-            //         <div>
-            //             <Switch>
-            //                 <Route exact path="/">
-            //         <Menu.Item key="1"><Link to="/">go to list page</Link></Menu.Item>
-            //         <TodoListPage />
-            //         </Route>
-            //         <Route exact path="/done">
-            //         <Menu.Item key="2"> <Link to="/done">go to done page</Link></Menu.Item>
-            //         </Route>
-            //         </Switch>
-            //         </div>
-            //         </HashRouter>
-            //         </Provider>
-            //       </Menu>
-            //     </Header>
-            //     <Content style={{ padding: '0 50px' }}>
-            //       <Breadcrumb style={{ margin: '16px 0' }}>
-            //         <Breadcrumb.Item>Home</Breadcrumb.Item>
-            //         <Breadcrumb.Item>List</Breadcrumb.Item>
-            //         <Breadcrumb.Item>App</Breadcrumb.Item>
-            //       </Breadcrumb>
-            //       <div className="site-layout-content">Content</div>
-            //     </Content>
-            //     <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
-            //   </Layout>
-
         );
     }
 }

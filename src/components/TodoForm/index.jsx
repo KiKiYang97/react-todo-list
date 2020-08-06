@@ -27,44 +27,29 @@ class TodoForm extends React.Component {
         console.log(this.state.value)
     }
     handleSubmit = (event) => {
-        // console.log(event)
-        // event.preventDefault();
-
         postTodos({
             content: this.state.value,
             status: false
         }).then(response => {
             this.props.addTodo(response.data)
         })
+        this.setState({
+            value:''
+        })
     }
     render() {
-        const suffix = (
-            <AudioOutlined
-              style={{
-                fontSize: 16,
-                color: '#1890ff',
-              }}
-            />
-          );
         return (
             <div style={{ marginTop: "79px" }}>
-                {/*todo method can't use */}
                 <h2><EditOutlined />Todo List</h2>
                 <Search
-                     style={{ width: "400px", marginLeft: "84px",marginBottom:"7px" }}
-                    placeholder="input todo text"
+                     style={{ width: "320px" ,marginBottom:"7px" }}
+                    placeholder="input todo content"
                     enterButton="Add"
                     size="large"
-                    suffix={suffix}
                     onChange={this.handleChange}
                     onSearch={this.handleSubmit}
+                     value={this.state.value}
                 />
-                {/* <Button style={{ width: "100px", marginLeft: "10px" }} htmlType="submit" type="primary" onClick={this.handleSubmit}>add</Button> */}
-
-                {/* <form  style = {{marginTop:"100px"}} onSubmit={this.handleSubmit}>
-                    <input type="text" onChange={this.handleChange} />
-                    <button  value="add"  type="submit"/>
-                </form > */}
             </div>
         );
     }

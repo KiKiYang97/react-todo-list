@@ -5,7 +5,7 @@ class TodoList extends React.Component {
 
     render() {
         return (
-            <div>
+            <div style={{height:"640px",overflow:"scroll"}}>
                 <div style={{
                     display: "inline-grid"
                 }}>
