@@ -46,7 +46,7 @@ class TodoForm extends React.Component {
 
     render() {
         return (
-            <div style={{marginTop: "79px"}}>
+            <div style={{marginTop: "10px"}}>
                 <h2><EditOutlined/>Todo List</h2>
                 <Search
                     style={{width: "320px", marginBottom: "7px"}}

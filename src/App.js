@@ -15,7 +15,7 @@ class App extends React.Component {
         return (  <Provider store={store}>
             <Router>
             <Layout className="layout">
-                <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+                <Header style={{ zIndex: 1, width: '100%' }}>
                     <div className="logo" />
                     <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
                         <Menu.Item key="1"><Link to="/">TODO List</Link></Menu.Item>
