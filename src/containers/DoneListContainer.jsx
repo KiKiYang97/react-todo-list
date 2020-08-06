@@ -4,9 +4,9 @@ import {deleteTodo, toggleCompleted} from "../actions";
 import DoneList from "../components/DoneList";
 
 const mapStateToProps=state=>{
+    console.log("DoneListContainer"+state.todoList)
     return{
-        // todo
-        todoList: state.todoList
+        todoList: state.todoList.filter(value=>value.status)
     }
 }
 

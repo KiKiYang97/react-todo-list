@@ -16,7 +16,7 @@ class TodoListPage extends React.Component {
                 {/* <Menu/> */}
 
                 <div className="App">
-                <TodoFormContainer/>
+                   <TodoFormContainer/>
                     <TodoListContainer/>
 
                 </div>
