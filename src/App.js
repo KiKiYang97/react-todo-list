@@ -12,18 +12,18 @@ import './App.css';
 const { Header, Content, Footer } = Layout;
 class App extends React.Component {
     render() {
-        return (
+        return (  <Provider store={store}>
+            <Router>
             <Layout className="layout">
                 <Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
                     <div className="logo" />
                     <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['1']}>
-                        <Menu.Item key="1"><a href="/">TODO List</a></Menu.Item>
-                        <Menu.Item key="2"><a href="/done">Done List</a></Menu.Item>
+                        <Menu.Item key="1"><Link to="/">TODO List</Link></Menu.Item>
+                        <Menu.Item key="2"><Link to="/done">Done List</Link></Menu.Item>
                     </Menu>
                 </Header>
                 <Content>
-                    <Provider store={store}>
-                        <Router>
+
                             <div>
                                 <Switch>
                                     <Route exact path="/">
@@ -34,11 +34,12 @@ class App extends React.Component {
                                     </Route>
                                 </Switch>
                             </div>
-                        </Router>
-                    </Provider>
+
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
             </Layout>
+            </Router>
+            </Provider>
             //     <Layout className="layout">
             //     <Header>
             //       <div className="logo" />
