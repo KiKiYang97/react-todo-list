@@ -23,14 +23,14 @@ class Todo extends React.Component {
                 display: "inline-flex"
             }}>
 
-                <div style={{ display: "flex",marginBottom:"7px" }} onClick={this.onToggleClick}>
+                <div style={{ display: "flex",marginBottom:"7px" }} >
                     {
                         this.props.todo.status
                             ? <Alert message={this.props.todo.content} type="success"
                                 style={{
                                     textDecoration: "line-through", width: "432px"
-                                }} />
-                            : <Alert style={{ width: "432px" }} message={this.props.todo.content} type="info" />
+                                }} onClick={this.onToggleClick}/>
+                            : <Alert style={{ width: "432px" }} message={this.props.todo.content} type="info" onClick={this.onToggleClick}/>
                     }
                     <Button type="primary" shape="circle" onClick={this.onDeleteClick}  icon={<DeleteOutlined />}>
                     </Button>

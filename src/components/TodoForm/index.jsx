@@ -51,7 +51,7 @@ class TodoForm extends React.Component {
                 {/*todo method can't use */}
                 <h2><EditOutlined />Todo List</h2>
                 <Search
-                     style={{ width: "400px", marginLeft: "84px" }}
+                     style={{ width: "400px", marginLeft: "84px",marginBottom:"7px" }}
                     placeholder="input todo text"
                     enterButton="Add"
                     size="large"

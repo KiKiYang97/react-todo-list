@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const todoApi=axios.create({
-    baseURL: `https://5e9ec500fb467500166c4658.mockapi.io`
+    // baseURL: `https://5e9ec500fb467500166c4658.mockapi.io`
+    baseURL: `http://localhost:8080`
 });
 
 export  async function  getTodos(){
