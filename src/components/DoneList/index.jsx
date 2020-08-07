@@ -4,7 +4,7 @@ class DoneList extends Component {
     render() {
         console.log(this.props.todoList)
         return (
-            <div style={{height: "640px", overflow: "scroll", textAlign:"center"}}>
+            <div style={{height: "640px", overflow: "auto", textAlign:"center"}}>
                 <div style={{
                     display: "inline-grid"
                 }}>
